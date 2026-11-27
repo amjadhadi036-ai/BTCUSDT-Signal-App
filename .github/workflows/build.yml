@@ -1,1 +1,45 @@
 
+
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get project files
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Cordova
+        run: npm install -g cordova@12
+
+      - name: Create Android app
+        run: |
+          cordova create app com.amjad.btcusdt "Amjad BTCUSDT"
+          cp "Amjad_BTCUSDT_Signal (1).html" app/www/index.html
+          cd app
+          cordova platform add android@13.0.0
+          cordova build android --debug
+
+      - name: Save APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Amjad-BTCUSDT-APK
+          path: app/platforms/android/app/build/outputs/apk/debug/app-debug.apk
