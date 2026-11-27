@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ur" dir="rtl">
 <head>
@@ -7,7 +8,7 @@
 <title>AMJAD BTCUSDT PRO SIGNALS</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#08111f;color:#eaf1fb;font-family:system-ui,-apple-system,sans-serif}
+body{margin:0;background:#08111f;color:#eaf1fb;font-family:system-ui,sans-serif}
 .wrap{max-width:650px;margin:auto;padding:14px}
 header{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 2px}
 h1{font-size:22px;margin:0;font-weight:900;direction:ltr;text-align:right}
@@ -31,21 +32,24 @@ hr{border:0;border-top:1px solid #293b52;margin:10px 0}
 .small{font-size:11px;color:#a6b4c8;line-height:1.7}
 .good{color:#37df9a}.bad{color:#ff697c}
 .err{color:#ff9aa7;font-size:12px;line-height:1.7;overflow-wrap:anywhere}
-.ltr{direction:ltr;text-align:left}
 footer{font-size:11px;color:#8fa0b7;line-height:1.8;padding:8px}
 </style>
 </head>
 <body>
 <div class="wrap">
+
 <header>
- <div><h1>AMJAD SIGNALS PRO</h1><div class="sub">BTCUSDT · BINANCE USDT-M · 15M ANALYSIS</div></div>
+ <div>
+  <h1>AMJAD SIGNALS PRO</h1>
+  <div class="sub">BTCUSDT · BINANCE USDT-M · 15M ANALYSIS</div>
+ </div>
  <span class="pill" id="connection">CONNECTING</span>
 </header>
 
 <section class="panel signalbox">
  <div class="muted">حتمی مارکیٹ سگنل · مکمل 15 منٹ کینڈل</div>
  <div id="signal" class="signal yellow">ڈیٹا لوڈ ہو رہا ہے</div>
- <div id="reason" class="sub">پہلی بار مارکیٹ کا تجزیہ جاری ہے</div>
+ <div id="reason" class="sub">مارکیٹ کا تجزیہ جاری ہے</div>
  <div id="price" class="price">— USDT</div>
  <div id="updated" class="sub">—</div>
  <div class="sub" id="candleInfo">15M candle: —</div>
@@ -61,7 +65,10 @@ footer{font-size:11px;color:#8fa0b7;line-height:1.8;padding:8px}
 </div>
 
 <section class="panel">
- <div class="row"><b>لائیو مارکیٹ ڈیٹا</b><span class="pill">ہر 1 منٹ بعد اپڈیٹ</span></div>
+ <div class="row">
+  <b>لائیو مارکیٹ ڈیٹا</b>
+  <span class="pill">ہر 1 منٹ بعد اپڈیٹ</span>
+ </div>
  <div class="grid">
   <div class="tile"><small>RSI 14</small><b id="rsi">—</b></div>
   <div class="tile"><small>MACD</small><b id="macd">—</b></div>
@@ -73,14 +80,19 @@ footer{font-size:11px;color:#8fa0b7;line-height:1.8;padding:8px}
 </section>
 
 <section class="panel">
- <div class="row"><b>Order Book / Buy-Sell Pressure</b><span class="pill">Binance Depth</span></div>
+ <div class="row">
+  <b>Order Book / Buy-Sell Pressure</b>
+  <span class="pill">Live Binance Depth</span>
+ </div>
  <div class="grid">
   <div class="tile"><small>Buy Pressure</small><b id="buy">—</b></div>
   <div class="tile"><small>Sell Pressure</small><b id="sell">—</b></div>
   <div class="tile"><small>Order Book Imbalance</small><b id="imbalance">—</b></div>
   <div class="tile"><small>24h Change</small><b id="change">—</b></div>
  </div>
- <div class="small">Order book عارضی آرڈرز پر مشتمل ہوتا ہے؛ یہ حقیقی خرید و فروخت یا بڑے سرمایہ کاروں کی پکی تصدیق نہیں ہے۔</div>
+ <div class="small">
+ Order Book ہر منٹ اپڈیٹ ہوتا ہے۔ عارضی آرڈرز حقیقی خرید و فروخت یا بڑے سرمایہ کاروں کی پکی تصدیق نہیں ہیں۔
+ </div>
 </section>
 
 <section class="panel">
@@ -91,102 +103,214 @@ footer{font-size:11px;color:#8fa0b7;line-height:1.8;padding:8px}
 <section class="panel">
  <b>Institutional / ETF Flow معلومات</b>
  <div class="checks">
-  <div class="row">BlackRock IBIT Flow <span class="yellow">مصدقہ لائیو فیڈ منسلک نہیں</span></div>
+  <div class="row">BlackRock IBIT Flow <span class="yellow">لائیو فیڈ دستیاب نہیں</span></div>
   <div class="row">ETF Net Inflow / Outflow <span class="yellow">دستیاب نہیں</span></div>
-  <div class="row">Bloomberg Terminal <span class="yellow">اکاؤنٹ/API دستیاب نہیں</span></div>
+  <div class="row">Bloomberg Terminal <span class="yellow">API دستیاب نہیں</span></div>
  </div>
- <div class="small">اس ایپ میں غیر دستیاب ETF یا Bloomberg ڈیٹا کو فرضی طور پر نہیں دکھایا جاتا۔ حقیقی ادارہ جاتی ڈیٹا کے لیے معتبر ڈیٹا فراہم کنندہ کی API درکار ہوگی۔</div>
+ <div class="small">
+ غیر دستیاب ادارہ جاتی ڈیٹا فرضی طور پر نہیں دکھایا جاتا۔ حقیقی ڈیٹا کے لیے معتبر API درکار ہے۔
+ </div>
 </section>
 
 <section class="panel">
- <div class="row"><b>رسک مینجمنٹ ریفرنس</b><span class="pill">Signals Only</span></div>
+ <div class="row">
+  <b>رسک مینجمنٹ ریفرنس</b>
+  <span class="pill">Signals Only</span>
+ </div>
  <div class="grid">
   <div class="tile"><small>Balance Reference</small><b>102 USDT</b></div>
   <div class="tile"><small>Leverage Reference</small><b>5x</b></div>
   <div class="tile"><small>Risk / Trade (0.5%)</small><b>0.51 USDT</b></div>
   <div class="tile"><small>Notional Cap</small><b>85 USDT</b></div>
  </div>
- <div class="small">یہ صرف حسابی ریفرنس ہے، ایپ کوئی آرڈر نہیں لگاتی۔</div>
+ <div class="small">یہ صرف حسابی ریفرنس ہے۔ ایپ کوئی آرڈر نہیں لگاتی۔</div>
 </section>
 
 <button class="btn" id="sound">🔔 آواز آن کریں</button>
 <button class="btn secondary" id="refresh">ابھی ڈیٹا ریفریش کریں</button>
 <div id="error" class="err"></div>
+
 <footer>
-یہ تعلیمی تجزیاتی ٹول ہے، منافع یا سگنل کی ضمانت نہیں۔ سگنل صرف مکمل 15 منٹ کینڈل کے بعد اپڈیٹ ہوتا ہے، جبکہ قیمت اور Order Book ہر منٹ ریفریش ہوتے ہیں۔ پہلے Demo/Paper Trading کریں۔ فیس، فنڈنگ، سلپیج اور لیکویڈیشن الگ عوامل ہیں۔
+یہ تعلیمی تجزیاتی ٹول ہے، منافع یا سگنل کی ضمانت نہیں۔
+سگنل صرف مکمل 15 منٹ کینڈل بند ہونے پر تبدیل ہوتا ہے۔
+قیمت اور Order Book ہر منٹ ریفریش ہوتے ہیں۔
+پہلے Demo/Paper Trading کریں۔ فیس، فنڈنگ، سلپیج اور لیکویڈیشن الگ عوامل ہیں۔
 </footer>
+
 </div>
 
 <script>
 'use strict';
+
 const $=id=>document.getElementById(id);
 const API='https://fapi.binance.com';
-let soundOn=false,lastSignal='',lastClosedCandle=0,refreshBusy=false;
+
+let soundOn=false;
+let lastSignal='';
+let lastClosedCandle=0;
+let refreshBusy=false;
 let cachedAnalysis=null;
 
-function fmt(n,d=2){return Number.isFinite(n)?n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}):'—'}
+function fmt(n,d=2){
+ return Number.isFinite(n)
+ ?n.toLocaleString('en-US',{
+  minimumFractionDigits:d,
+  maximumFractionDigits:d
+ })
+ :'—';
+}
+
 function ema(values,period){
  if(values.length<period)return NaN;
- const k=2/(period+1);let v=values[0];
- for(let i=1;i<values.length;i++)v=values[i]*k+v*(1-k);
+ const k=2/(period+1);
+ let v=values[0];
+ for(let i=1;i<values.length;i++){
+  v=values[i]*k+v*(1-k);
+ }
  return v;
 }
+
 function rsi(values,period=14){
  if(values.length<period+1)return NaN;
+
  let gains=0,losses=0;
+
  for(let i=values.length-period;i<values.length;i++){
   const diff=values[i]-values[i-1];
-  if(diff>0)gains+=diff;else losses-=diff;
+  if(diff>0)gains+=diff;
+  else losses-=diff;
  }
+
  if(losses===0)return 100;
- return 100-(100/(1+(gains/period)/(losses/period)));
+
+ const avgGain=gains/period;
+ const avgLoss=losses/period;
+
+ return 100-(100/(1+avgGain/avgLoss));
 }
+
 function macd(values){
- const fast=ema(values.slice(-40),12),slow=ema(values.slice(-40),26);
- const hist=fast-slow;
- return {line:hist,signal:hist>0};
+ const fast=ema(values.slice(-60),12);
+ const slow=ema(values.slice(-60),26);
+ const line=fast-slow;
+ return {line};
 }
+
 function bollinger(values,period=20){
  const a=values.slice(-period);
  const mean=a.reduce((s,v)=>s+v,0)/a.length;
  const variance=a.reduce((s,v)=>s+(v-mean)**2,0)/a.length;
  const sd=Math.sqrt(variance);
- return {mid:mean,upper:mean+2*sd,lower:mean-2*sd};
+
+ return {
+  mid:mean,
+  upper:mean+2*sd,
+  lower:mean-2*sd
+ };
 }
+
 function atr(candles,period=14){
  if(candles.length<period+1)return NaN;
+
  const trs=[];
+
  for(let i=candles.length-period;i<candles.length;i++){
-  const c=candles[i],prev=candles[i-1];
-  trs.push(Math.max(c.h-c.l,Math.abs(c.h-prev.c),Math.abs(c.l-prev.c)));
+  const c=candles[i];
+  const prev=candles[i-1];
+
+  trs.push(Math.max(
+   c.h-c.l,
+   Math.abs(c.h-prev.c),
+   Math.abs(c.l-prev.c)
+  ));
  }
+
  return trs.reduce((s,v)=>s+v,0)/trs.length;
 }
+
 function beep(){
  try{
   const ctx=new (window.AudioContext||window.webkitAudioContext)();
-  const osc=ctx.createOscillator(),gain=ctx.createGain();
-  osc.connect(gain);gain.connect(ctx.destination);
-  osc.frequency.value=880;gain.gain.value=.12;
-  osc.start();osc.stop(ctx.currentTime+.2);
+  const osc=ctx.createOscillator();
+  const gain=ctx.createGain();
+
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+
+  osc.frequency.value=880;
+  gain.gain.value=.12;
+
+  osc.start();
+  osc.stop(ctx.currentTime+.2);
  }catch(e){}
 }
+
 async function getJSON(url){
  const r=await fetch(url,{cache:'no-store'});
- if(!r.ok)throw new Error('Binance API جواب نہیں دے رہی ('+r.status+')');
+
+ if(!r.ok){
+  throw new Error('Binance API Error: '+r.status);
+ }
+
  return r.json();
 }
-function setText(id,value){$(id).textContent=value}
-function analyze(candles,book){
- const closes=candles.map(c=>c.c),volumes=candles.map(c=>c.v);
- const last=candles[candles.length-1],price=last.c;
- const e9=ema(closes.slice(-60),9),e21=ema(closes.slice(-80),21);
- const rv=rsi(closes,14),bb=bollinger(closes,20),a=atr(candles,14),m=macd(closes);
- const avgVol=volumes.slice(-20).reduce((s,v)=>s+v,0)/Math.min(20,volumes.length);
- const volumeOK=last.v>avgVol;
- const bids=book.bids.slice(0,20).reduce((s,x)=>s+Number(x[1]),0);
- const asks=book.asks.slice(0,20).reduce((s,x)=>s+Number(x[1]),0);
+
+function setText(id,value){
+ $(id).textContent=value;
+}
+
+/* LIVE ORDER BOOK: EVERY REFRESH */
+
+function updateOrderBook(book){
+ const bids=book.bids.slice(0,20)
+  .reduce((s,x)=>s+Number(x[1]),0);
+
+ const asks=book.asks.slice(0,20)
+  .reduce((s,x)=>s+Number(x[1]),0);
+
  const imbalance=(bids-asks)/(bids+asks||1);
+ const pct=imbalance*100;
+
+ setText('buy',fmt(bids,3)+' BTC');
+ setText('sell',fmt(asks,3)+' BTC');
+
+ setText(
+  'imbalance',
+  (pct>0?'+':'')+fmt(pct,1)+'%'
+ );
+}
+
+/* TECHNICAL ANALYSIS: CLOSED 15M CANDLES */
+
+function analyze(candles,book){
+
+ const closes=candles.map(c=>c.c);
+ const volumes=candles.map(c=>c.v);
+
+ const last=candles[candles.length-1];
+ const price=last.c;
+
+ const e9=ema(closes.slice(-60),9);
+ const e21=ema(closes.slice(-80),21);
+
+ const rv=rsi(closes,14);
+ const bb=bollinger(closes,20);
+ const a=atr(candles,14);
+ const m=macd(closes);
+
+ const avgVol=volumes.slice(-20)
+  .reduce((s,v)=>s+v,0)/Math.min(20,volumes.length);
+
+ const volumeOK=last.v>avgVol;
+
+ const bids=book.bids.slice(0,20)
+  .reduce((s,x)=>s+Number(x[1]),0);
+
+ const asks=book.asks.slice(0,20)
+  .reduce((s,x)=>s+Number(x[1]),0);
+
+ const imbalance=(bids-asks)/(bids+asks||1);
+
  const up=[
   e9>e21,
   price>e9,
@@ -196,6 +320,7 @@ function analyze(candles,book){
   imbalance>.08,
   volumeOK
  ];
+
  const down=[
   e9<e21,
   price<e9,
@@ -205,88 +330,295 @@ function analyze(candles,book){
   imbalance<-.08,
   volumeOK
  ];
- const upScore=up.filter(Boolean).length,downScore=down.filter(Boolean).length;
- // 5/7 confirmations plus trend and momentum confirmation: conservative signal.
+
+ const upScore=up.filter(Boolean).length;
+ const downScore=down.filter(Boolean).length;
+
  let signal='NO TRADE';
- if(upScore>=5&&e9>e21&&m.line>0&&rv>50)signal='LONG';
- else if(downScore>=5&&e9<e21&&m.line<0&&rv<50)signal='SHORT';
- const entry=price;
- let sl=null,tp1=null,tp2=null,tp3=null;
- if(signal==='LONG'&&Number.isFinite(a)&&a>0){
-  sl=entry-1.5*a;const risk=entry-sl;tp1=entry+risk;tp2=entry+2*risk;tp3=entry+3*risk;
- }else if(signal==='SHORT'&&Number.isFinite(a)&&a>0){
-  sl=entry+1.5*a;const risk=sl-entry;tp1=entry-risk;tp2=entry-2*risk;tp3=entry-3*risk;
+
+ if(
+  upScore>=5&&
+  e9>e21&&
+  m.line>0&&
+  rv>50
+ ){
+  signal='LONG';
  }
- return {signal,entry,sl,tp1,tp2,tp3,upScore,downScore,e9,e21,rv,bb,a,m,volumeOK,imbalance,bids,asks,last};
+ else if(
+  downScore>=5&&
+  e9<e21&&
+  m.line<0&&
+  rv<50
+ ){
+  signal='SHORT';
+ }
+
+ const entry=price;
+
+ let sl=null,tp1=null,tp2=null,tp3=null;
+
+ if(signal==='LONG'&&Number.isFinite(a)&&a>0){
+  sl=entry-1.5*a;
+  const risk=entry-sl;
+
+  tp1=entry+risk;
+  tp2=entry+2*risk;
+  tp3=entry+3*risk;
+ }
+
+ else if(signal==='SHORT'&&Number.isFinite(a)&&a>0){
+  sl=entry+1.5*a;
+  const risk=sl-entry;
+
+  tp1=entry-risk;
+  tp2=entry-2*risk;
+  tp3=entry-3*risk;
+ }
+
+ return {
+  signal,entry,sl,tp1,tp2,tp3,
+  upScore,downScore,e9,e21,
+  rv,bb,a,m,volumeOK,
+  imbalance,bids,asks,last
+ };
 }
+
+/* DISPLAY SIGNAL */
+
 function showAnalysis(x){
+
  const s=x.signal;
+
  setText('signal',s);
- $('signal').className='signal '+(s==='LONG'?'green':s==='SHORT'?'red':'yellow');
- setText('reason',s==='NO TRADE'?'واضح اور مکمل تصدیق موجود نہیں؛ ٹریڈ سے گریز کریں':s+' · اگلی مکمل 15M کینڈل تک سگنل برقرار رہے گا');
- setText('entry',fmt(x.entry));setText('sl',x.sl?fmt(x.sl):'—');
- setText('tp1',x.tp1?fmt(x.tp1):'—');setText('tp2',x.tp2?fmt(x.tp2):'—');setText('tp3',x.tp3?fmt(x.tp3):'—');
- setText('strength',Math.max(x.upScore,x.downScore)+'/7');
- setText('rsi',fmt(x.rv,1));setText('macd',fmt(x.m.line,2));
- setText('ema',fmt(x.e9,1)+' / '+fmt(x.e21,1));
- setText('bb',fmt(x.bb.lower,0)+' – '+fmt(x.bb.upper,0));
- setText('atr',fmt(x.a,2));setText('volume',x.volumeOK?'اوسط سے زیادہ':'اوسط سے کم');
+
+ $('signal').className=
+  'signal '+(
+   s==='LONG'?'green':
+   s==='SHORT'?'red':'yellow'
+  );
+
+ setText(
+  'reason',
+  s==='NO TRADE'
+  ?'مکمل تصدیق موجود نہیں؛ ٹریڈ سے گریز کریں'
+  :s+' · اگلی مکمل 15M کینڈل تک سگنل برقرار'
+ );
+
+ setText('entry',fmt(x.entry));
+ setText('sl',x.sl?fmt(x.sl):'—');
+ setText('tp1',x.tp1?fmt(x.tp1):'—');
+ setText('tp2',x.tp2?fmt(x.tp2):'—');
+ setText('tp3',x.tp3?fmt(x.tp3):'—');
+
+ setText(
+  'strength',
+  Math.max(x.upScore,x.downScore)+'/7'
+ );
+
+ setText('rsi',fmt(x.rv,1));
+ setText('macd',fmt(x.m.line,2));
+
+ setText(
+  'ema',
+  fmt(x.e9,1)+' / '+fmt(x.e21,1)
+ );
+
+ setText(
+  'bb',
+  fmt(x.bb.lower,0)+' – '+fmt(x.bb.upper,0)
+ );
+
+ setText('atr',fmt(x.a,2));
+
+ setText(
+  'volume',
+  x.volumeOK?'اوسط سے زیادہ':'اوسط سے کم'
+ );
+
  const pct=x.imbalance*100;
- setText('buy',fmt(x.bids,3)+' BTC');setText('sell',fmt(x.asks,3)+' BTC');
- setText('imbalance',(pct>0?'+':'')+fmt(pct,1)+'%');
- const upText=x.upScore+'/7',downText=x.downScore+'/7';
+
  $('checks').innerHTML=
-  'EMA 9 / 21 <span>'+ (x.e9>x.e21?'Bullish':'Bearish')+'</span><br>'+
+  'EMA 9 / 21 <span>'+
+  (x.e9>x.e21?'Bullish':'Bearish')+
+  '</span><br>'+
+
   'RSI 14 <span>'+fmt(x.rv,1)+'</span><br>'+
-  'MACD <span>'+ (x.m.line>0?'Bullish':'Bearish')+'</span><br>'+
-  'Bollinger Mid <span>'+ (x.entry>x.bb.mid?'قیمت اوپر':'قیمت نیچے')+'</span><br>'+
-  'Volume <span>'+ (x.volumeOK?'زیادہ':'کم')+'</span><br>'+
-  'Order Book <span>'+ (pct>=0?'Buyers':'Sellers')+' '+fmt(Math.abs(pct),1)+'%</span><br>'+
-  'LONG confirmations <span>'+upText+'</span><br>'+
-  'SHORT confirmations <span>'+downText+'</span>';
- if(soundOn&&s!=='NO TRADE'&&s!==lastSignal)beep();
+
+  'MACD <span>'+
+  (x.m.line>0?'Bullish':'Bearish')+
+  '</span><br>'+
+
+  'Bollinger Mid <span>'+
+  (x.entry>x.bb.mid?'قیمت اوپر':'قیمت نیچے')+
+  '</span><br>'+
+
+  'Volume <span>'+
+  (x.volumeOK?'زیادہ':'کم')+
+  '</span><br>'+
+
+  'Order Book <span>'+
+  (pct>=0?'Buyers':'Sellers')+
+  ' '+fmt(Math.abs(pct),1)+'%</span><br>'+
+
+  'LONG confirmations <span>'+
+  x.upScore+'/7</span><br>'+
+
+  'SHORT confirmations <span>'+
+  x.downScore+'/7</span>';
+
+ if(
+  soundOn&&
+  s!=='NO TRADE'&&
+  s!==lastSignal
+ ){
+  beep();
+ }
+
  lastSignal=s;
 }
+
+/* MAIN REFRESH */
+
 async function load(){
- if(refreshBusy)return;refreshBusy=true;
- $('error').textContent='';setText('connection','UPDATING');
+
+ if(refreshBusy)return;
+
+ refreshBusy=true;
+ $('error').textContent='';
+ setText('connection','UPDATING');
+
  try{
+
   const [raw,book,ticker]=await Promise.all([
-   getJSON(API+'/fapi/v1/klines?symbol=BTCUSDT&interval=15m&limit=150'),
-   getJSON(API+'/fapi/v1/depth?symbol=BTCUSDT&limit=100'),
-   getJSON(API+'/fapi/v1/ticker/24hr?symbol=BTCUSDT')
+
+   getJSON(
+    API+'/fapi/v1/klines?symbol=BTCUSDT&interval=15m&limit=150'
+   ),
+
+   getJSON(
+    API+'/fapi/v1/depth?symbol=BTCUSDT&limit=100'
+   ),
+
+   getJSON(
+    API+'/fapi/v1/ticker/24hr?symbol=BTCUSDT'
+   )
+
   ]);
-  if(!Array.isArray(raw)||raw.length<50)throw new Error('کافی 15 منٹ ڈیٹا دستیاب نہیں');
-  // Binance returns the current unfinished candle last; exclude it from signal calculations.
-  const closed=raw.slice(0,-1).map(k=>({t:+k[0],o:+k[1],h:+k[2],l:+k[3],c:+k[4],v:+k[5]}));
-  const livePrice=Number(ticker.lastPrice);
-  const candle=closed[closed.length-1];
-  // Recalculate the signal only when a NEW 15m candle has fully closed.
-  if(candle.t!==lastClosedCandle){
-   cachedAnalysis=analyze(closed,book);
-   lastClosedCandle=candle.t;
-   showAnalysis(cachedAnalysis);
+
+  if(!Array.isArray(raw)||raw.length<50){
+   throw new Error('کافی 15 منٹ ڈیٹا دستیاب نہیں');
   }
-  setText('price',fmt(livePrice)+' USDT');
-  setText('change',fmt(Number(ticker.priceChangePercent),2)+'%');
-  $('change').className=Number(ticker.priceChangePercent)>=0?'good':'bad';
-  setText('updated','آخری ڈیٹا: '+new Date().toLocaleTimeString());
-  setText('candleInfo','آخری مکمل 15M کینڈل: '+new Date(candle.t+900000).toLocaleTimeString());
+
+  /*
+   Binance کی آخری Kline جاری کینڈل ہوتی ہے۔
+   اسے سگنل کے حساب سے خارج رکھا جاتا ہے۔
+  */
+
+  const closed=raw.slice(0,-1).map(k=>({
+   t:+k[0],
+   o:+k[1],
+   h:+k[2],
+   l:+k[3],
+   c:+k[4],
+   v:+k[5]
+  }));
+
+  const livePrice=Number(ticker.lastPrice);
+
+  const candle=closed[closed.length-1];
+
+  /*
+   SIGNAL:
+   صرف نئی مکمل 15 منٹ کینڈل آنے پر
+   دوبارہ تجزیہ کیا جائے گا۔
+  */
+
+  if(candle.t!==lastClosedCandle){
+
+   cachedAnalysis=analyze(closed,book);
+
+   lastClosedCandle=candle.t;
+
+   showAnalysis(cachedAnalysis);
+
+  }
+
+  /*
+   LIVE DATA:
+   یہ معلومات ہر ایک منٹ بعد اپڈیٹ ہوں گی۔
+  */
+
+  updateOrderBook(book);
+
+  setText(
+   'price',
+   fmt(livePrice)+' USDT'
+  );
+
+  setText(
+   'change',
+   fmt(Number(ticker.priceChangePercent),2)+'%'
+  );
+
+  $('change').className=
+   Number(ticker.priceChangePercent)>=0
+   ?'good':'bad';
+
+  setText(
+   'updated',
+   'آخری ڈیٹا: '+new Date().toLocaleTimeString()
+  );
+
+  setText(
+   'candleInfo',
+   'آخری مکمل 15M کینڈل: '+
+   new Date(candle.t+900000).toLocaleTimeString()
+  );
+
+  /*
+   Entry display live price دکھاتا ہے۔
+   SL/TP آخری مکمل کینڈل کے ATR پر مبنی ہیں۔
+  */
+
   if(cachedAnalysis){
-   // Entry follows the current market price for display; SL/TP remain based on closed-candle ATR.
    setText('entry',fmt(livePrice));
   }
+
   setText('connection','CONNECTED');
+
  }catch(e){
+
   setText('connection','OFFLINE');
-  $('error').textContent='کنکشن مسئلہ: '+e.message+'۔ انٹرنیٹ چیک کریں اور دوبارہ کوشش کریں۔';
+
+  $('error').textContent=
+   'کنکشن مسئلہ: '+e.message+
+   '۔ انٹرنیٹ چیک کریں اور دوبارہ کوشش کریں۔';
+
+ }finally{
+
+  refreshBusy=false;
+
  }
- finally{refreshBusy=false;}
 }
-$('sound').addEventListener('click',()=>{soundOn=true;beep();setText('sound','🔔 آواز آن ہے')});
+
+/* BUTTONS */
+
+$('sound').addEventListener('click',()=>{
+ soundOn=true;
+ beep();
+ setText('sound','🔔 آواز آن ہے');
+});
+
 $('refresh').addEventListener('click',load);
+
+/* INITIAL LOAD */
+
 load();
+
+/* EVERY 60 SECONDS */
+
 setInterval(load,60000);
+
 </script>
 </body>
 </html>
