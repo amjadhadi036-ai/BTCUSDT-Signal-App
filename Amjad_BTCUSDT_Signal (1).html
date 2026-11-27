@@ -1,386 +1,292 @@
-Add Bloomberg and BlackRock Analysis<!doctype html>
+<!doctype html>
 <html lang="ur" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#101827">
-<title>Amjad BTCUSDT Signals</title>
+<meta name="theme-color" content="#0b1220">
+<title>AMJAD BTCUSDT PRO SIGNALS</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#0b1220;color:#edf2f7;font-family:system-ui,-apple-system,sans-serif}
-.wrap{max-width:620px;margin:auto;padding:16px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.brand{font-size:22px;font-weight:900;direction:ltr;text-align:right}
-.sub{color:#9aa9bd;font-size:12px}
-.panel{background:#141f30;border:1px solid #27364b;border-radius:16px;padding:15px;margin-top:13px}
-.status{text-align:center;padding:20px 10px}
-.signal{font-size:32px;font-weight:900;margin:8px}
-.muted{color:#9aa9bd}
-.green{color:#39d98a}.red{color:#ff6878}.yellow{color:#ffd166}
-.big{font-size:25px;font-weight:800;direction:ltr}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.tile{background:#0e1828;border-radius:11px;padding:11px}
-.tile small{display:block;color:#9aa9bd;margin-bottom:5px;font-size:12px}
-.tile b{font-size:17px;direction:ltr;display:block}
-.btn{border:0;border-radius:11px;padding:13px 14px;background:#2f80ed;color:white;font-size:15px;font-weight:700;width:100%;margin-top:10px}
-.btn.secondary{background:#26364d}
+body{margin:0;background:#08111f;color:#eaf1fb;font-family:system-ui,-apple-system,sans-serif}
+.wrap{max-width:650px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 2px}
+h1{font-size:22px;margin:0;font-weight:900;direction:ltr;text-align:right}
+.sub,.muted{color:#9aabc2;font-size:12px}
+.pill{border-radius:30px;padding:6px 10px;background:#26364d;font-size:11px}
+.panel{background:#121f31;border:1px solid #263a54;border-radius:16px;padding:14px;margin:12px 0}
+.signalbox{text-align:center;padding:20px 10px}
+.signal{font-size:32px;font-weight:950;margin:8px}
+.green{color:#37df9a}.red{color:#ff697c}.yellow{color:#ffd166}
+.price{font-size:27px;font-weight:850;direction:ltr}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.tile{background:#0b1727;border-radius:12px;padding:11px;min-width:0}
+.tile small{display:block;color:#9aabc2;font-size:11px;margin-bottom:5px}
+.tile b{font-size:16px;direction:ltr;display:block;overflow-wrap:anywhere}
 .row{display:flex;justify-content:space-between;gap:10px;margin:8px 0;align-items:center}
-.pill{padding:5px 9px;border-radius:20px;background:#26364d;font-size:11px;white-space:nowrap}
-.checks{font-size:13px;line-height:2;color:#c4d0df}
+.btn{width:100%;border:0;border-radius:12px;padding:13px;background:#2678e8;color:white;font-weight:800;font-size:15px;margin-top:9px}
+.btn.secondary{background:#2a3b52}
+.checks{font-size:13px;line-height:2.05}
 .checks span{float:left;direction:ltr}
-.foot{font-size:12px;color:#92a1b5;line-height:1.7;margin:14px 3px}
-.err{color:#ff9aa5;font-size:13px;line-height:1.6;margin-top:8px}
-.goodnote{color:#9ee6bd;font-size:12px;line-height:1.6}
-.warn{color:#ffd166;font-size:12px;line-height:1.6}
-.ltr{direction:ltr;unicode-bidi:embed}
+hr{border:0;border-top:1px solid #293b52;margin:10px 0}
+.small{font-size:11px;color:#a6b4c8;line-height:1.7}
+.good{color:#37df9a}.bad{color:#ff697c}
+.err{color:#ff9aa7;font-size:12px;line-height:1.7;overflow-wrap:anywhere}
+.ltr{direction:ltr;text-align:left}
+footer{font-size:11px;color:#8fa0b7;line-height:1.8;padding:8px}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="top">
-    <div>
-      <div class="brand">AMJAD BTCUSDT</div>
-      <div class="sub">Binance USDT-M Futures · 15m Signal / 1m Live</div>
-    </div>
-    <span class="pill" id="live">CONNECTING</span>
-  </div>
+<header>
+ <div><h1>AMJAD SIGNALS PRO</h1><div class="sub">BTCUSDT · BINANCE USDT-M · 15M ANALYSIS</div></div>
+ <span class="pill" id="connection">CONNECTING</span>
+</header>
 
-  <div class="panel status">
-    <div class="muted">حتمی مارکیٹ سگنل · 15 منٹ</div>
-    <div id="signal" class="signal yellow">انتظار کریں</div>
-    <div id="reason" class="sub">مارکیٹ ڈیٹا لوڈ ہو رہا ہے…</div>
-    <div class="big" id="price">—</div>
-    <div class="sub" id="updated">—</div>
-    <div class="sub" id="candleInfo">15m بند کینڈل: —</div>
-  </div>
+<section class="panel signalbox">
+ <div class="muted">حتمی مارکیٹ سگنل · مکمل 15 منٹ کینڈل</div>
+ <div id="signal" class="signal yellow">ڈیٹا لوڈ ہو رہا ہے</div>
+ <div id="reason" class="sub">پہلی بار مارکیٹ کا تجزیہ جاری ہے</div>
+ <div id="price" class="price">— USDT</div>
+ <div id="updated" class="sub">—</div>
+ <div class="sub" id="candleInfo">15M candle: —</div>
+</section>
 
-  <div class="grid">
-    <div class="tile"><small>Entry Reference</small><b id="entry">—</b></div>
-    <div class="tile"><small>Stop Loss Reference</small><b id="sl">—</b></div>
-    <div class="tile"><small>Take Profit Reference</small><b id="tp">—</b></div>
-    <div class="tile"><small>Signal Strength</small><b id="strength">—</b></div>
-    <div class="tile"><small>1m Price Change</small><b id="oneMin">—</b></div>
-    <div class="tile"><small>15m Trend</small><b id="trend">—</b></div>
-  </div>
+<div class="grid">
+ <div class="tile"><small>Entry Price</small><b id="entry">—</b></div>
+ <div class="tile"><small>Stop Loss</small><b id="sl">—</b></div>
+ <div class="tile"><small>Take Profit 1</small><b id="tp1">—</b></div>
+ <div class="tile"><small>Take Profit 2</small><b id="tp2">—</b></div>
+ <div class="tile"><small>Take Profit 3</small><b id="tp3">—</b></div>
+ <div class="tile"><small>Signal Strength</small><b id="strength">—</b></div>
+</div>
 
-  <div class="panel">
-    <div class="row"><b>مارکیٹ ڈیٹا</b><span class="pill">Live Monitoring</span></div>
-    <div class="grid">
-      <div class="tile"><small>RSI 14 · 15m</small><b id="rsi">—</b></div>
-      <div class="tile"><small>EMA 9 / 21</small><b id="ema">—</b></div>
-      <div class="tile"><small>Order Book Imbalance</small><b id="imbalance">—</b></div>
-      <div class="tile"><small>Volume Confirmation</small><b id="volume">—</b></div>
-      <div class="tile"><small>Open Interest</small><b id="oi">—</b></div>
-      <div class="tile"><small>Funding Rate</small><b id="funding">—</b></div>
-    </div>
-  </div>
+<section class="panel">
+ <div class="row"><b>لائیو مارکیٹ ڈیٹا</b><span class="pill">ہر 1 منٹ بعد اپڈیٹ</span></div>
+ <div class="grid">
+  <div class="tile"><small>RSI 14</small><b id="rsi">—</b></div>
+  <div class="tile"><small>MACD</small><b id="macd">—</b></div>
+  <div class="tile"><small>EMA 9 / 21</small><b id="ema">—</b></div>
+  <div class="tile"><small>Bollinger Bands</small><b id="bb">—</b></div>
+  <div class="tile"><small>ATR 14</small><b id="atr">—</b></div>
+  <div class="tile"><small>Volume</small><b id="volume">—</b></div>
+ </div>
+</section>
 
-  <div class="panel">
-    <div class="row"><b>تجزیے کی تفصیل</b><span class="pill">15m Confirmation</span></div>
-    <div class="checks" id="checks">ڈیٹا آنے کا انتظار…</div>
-  </div>
+<section class="panel">
+ <div class="row"><b>Order Book / Buy-Sell Pressure</b><span class="pill">Binance Depth</span></div>
+ <div class="grid">
+  <div class="tile"><small>Buy Pressure</small><b id="buy">—</b></div>
+  <div class="tile"><small>Sell Pressure</small><b id="sell">—</b></div>
+  <div class="tile"><small>Order Book Imbalance</small><b id="imbalance">—</b></div>
+  <div class="tile"><small>24h Change</small><b id="change">—</b></div>
+ </div>
+ <div class="small">Order book عارضی آرڈرز پر مشتمل ہوتا ہے؛ یہ حقیقی خرید و فروخت یا بڑے سرمایہ کاروں کی پکی تصدیق نہیں ہے۔</div>
+</section>
 
-  <div class="panel">
-    <div class="row"><b>BlackRock iShares Bitcoin Trust (IBIT)</b><span class="pill" id="ibitBadge">DATA CHECK</span></div>
-    <div class="grid">
-      <div class="tile"><small>Holdings As Of</small><b id="ibitDate">—</b></div>
-      <div class="tile"><small>Bitcoin Held</small><b id="ibitBtc">—</b></div>
-      <div class="tile"><small>Shares Outstanding</small><b id="ibitShares">—</b></div>
-      <div class="tile"><small>Fund BTC Value (approx.)</small><b id="ibitValue">—</b></div>
-    </div>
-    <div class="tile" style="margin-top:9px">
-      <small>Estimated BTC Holding Change Since Previous Saved Daily Snapshot</small>
-      <b id="ibitFlow">پہلا ڈیٹا حاصل ہونے کا انتظار…</b>
-      <div class="sub" id="ibitFlowNote">یہ holdings میں تبدیلی پر مبنی تخمینہ ہے، BlackRock کا سرکاری cash-flow figure نہیں۔</div>
-    </div>
-    <div id="etfStatus" class="warn" style="margin-top:9px">سرکاری BlackRock holdings CSV سے ڈیٹا حاصل کرنے کی کوشش ہو رہی ہے۔ اگر فون/نیٹ ورک اسے بلاک کرے تو نیچے سرکاری لنک کھولیں۔</div>
-    <div class="row" style="margin-top:10px">
-      <a href="https://www.blackrock.com/us/individual/products/333011/ishares-bitcoin-trust-etf/latest-holdings.csv" target="_blank" rel="noopener" style="color:#8fc3ff">BlackRock کا تازہ Holdings CSV</a>
-    </div>
-    <div class="sub">پہلی مرتبہ ایپ کھلنے پر پچھلا تقابلی ریکارڈ موجود نہیں ہوگا۔ ایپ روزانہ دستیاب snapshot محفوظ کرکے اگلے نئے snapshot سے تبدیلی کا تخمینہ لگائے گی۔</div>
-  </div>
+<section class="panel">
+ <b>مارکیٹ کا تفصیلی تجزیہ</b>
+ <div id="checks" class="checks">ڈیٹا آنے کا انتظار…</div>
+</section>
 
-  <div class="panel">
-    <div class="row"><b>Bloomberg Market Reference</b><span class="pill" id="bloombergBadge">LICENSE REQUIRED</span></div>
-    <div class="grid">
-      <div class="tile"><small>IBIT Benchmark Ticker</small><b>BRRNY</b></div>
-      <div class="tile"><small>Bloomberg Live Feed</small><b id="bloombergStatus">منسلک نہیں</b></div>
-    </div>
-    <div class="warn" style="margin-top:9px">BRRNY، BlackRock کے IBIT صفحے پر درج Bloomberg benchmark ticker ہے؛ یہ خود Bloomberg کی live قیمت یا Terminal feed نہیں۔ اصل Bloomberg ڈیٹا کے لیے مجاز اکاؤنٹ، API credentials اور متعلقہ data entitlement درکار ہیں۔</div>
-    <div class="row" style="margin-top:10px">
-      <a href="https://professional.bloomberg.com/support/api-library/" target="_blank" rel="noopener" style="color:#8fc3ff">Bloomberg API documentation</a>
-    </div>
-  </div>
+<section class="panel">
+ <b>Institutional / ETF Flow معلومات</b>
+ <div class="checks">
+  <div class="row">BlackRock IBIT Flow <span class="yellow">مصدقہ لائیو فیڈ منسلک نہیں</span></div>
+  <div class="row">ETF Net Inflow / Outflow <span class="yellow">دستیاب نہیں</span></div>
+  <div class="row">Bloomberg Terminal <span class="yellow">اکاؤنٹ/API دستیاب نہیں</span></div>
+ </div>
+ <div class="small">اس ایپ میں غیر دستیاب ETF یا Bloomberg ڈیٹا کو فرضی طور پر نہیں دکھایا جاتا۔ حقیقی ادارہ جاتی ڈیٹا کے لیے معتبر ڈیٹا فراہم کنندہ کی API درکار ہوگی۔</div>
+</section>
 
-  <div class="panel">
-    <div class="row"><b>رسک سیٹنگز (حوالہ)</b><span class="pill">Signals Only</span></div>
-    <div class="grid">
-      <div class="tile"><small>Balance</small><b>102 USDT</b></div>
-      <div class="tile"><small>Leverage Reference</small><b>5x</b></div>
-      <div class="tile"><small>Risk / Trade</small><b>0.51 USDT</b></div>
-      <div class="tile"><small>Notional Cap</small><b>85 USDT</b></div>
-    </div>
-    <div class="warn" style="margin-top:9px">یہ اعداد صرف آپ کے پہلے سیٹ کردہ حوالہ ہیں؛ ایپ کوئی آرڈر نہیں لگاتی اور پوزیشن سائز خودکار طور پر طے نہیں کرتی۔</div>
-  </div>
+<section class="panel">
+ <div class="row"><b>رسک مینجمنٹ ریفرنس</b><span class="pill">Signals Only</span></div>
+ <div class="grid">
+  <div class="tile"><small>Balance Reference</small><b>102 USDT</b></div>
+  <div class="tile"><small>Leverage Reference</small><b>5x</b></div>
+  <div class="tile"><small>Risk / Trade (0.5%)</small><b>0.51 USDT</b></div>
+  <div class="tile"><small>Notional Cap</small><b>85 USDT</b></div>
+ </div>
+ <div class="small">یہ صرف حسابی ریفرنس ہے، ایپ کوئی آرڈر نہیں لگاتی۔</div>
+</section>
 
-  <button class="btn" id="sound">🔔 آواز آن کریں</button>
-  <button class="btn secondary" id="refresh">ابھی ریفریش کریں</button>
-  <div class="foot">ڈیٹا Binance کے عوامی USDT-M Futures endpoints سے آتا ہے۔ حتمی سگنل صرف مکمل ہونے والی 15 منٹ کی کینڈلز سے بنتا ہے؛ 1 منٹ کا ڈیٹا قیمت کی نگرانی کے لیے ہے، سگنل کو ہر منٹ نہیں بدلتا۔ یہ تعلیمی ٹول ہے، مالی مشورہ نہیں۔ Stop Loss / Take Profit صرف تخمینی حوالہ ہیں؛ فیس، funding، slippage اور liquidation شامل نہیں۔ پہلے Demo/Paper Trading کریں۔</div>
-  <div class="err" id="error"></div>
+<button class="btn" id="sound">🔔 آواز آن کریں</button>
+<button class="btn secondary" id="refresh">ابھی ڈیٹا ریفریش کریں</button>
+<div id="error" class="err"></div>
+<footer>
+یہ تعلیمی تجزیاتی ٹول ہے، منافع یا سگنل کی ضمانت نہیں۔ سگنل صرف مکمل 15 منٹ کینڈل کے بعد اپڈیٹ ہوتا ہے، جبکہ قیمت اور Order Book ہر منٹ ریفریش ہوتے ہیں۔ پہلے Demo/Paper Trading کریں۔ فیس، فنڈنگ، سلپیج اور لیکویڈیشن الگ عوامل ہیں۔
+</footer>
 </div>
 
 <script>
 'use strict';
-const $ = id => document.getElementById(id);
-const BASE = 'https://fapi.binance.com';
-let soundOn = false;
-let lastSignal = '';
-let busy = false;
-let lastIbitFetch = 0;
+const $=id=>document.getElementById(id);
+const API='https://fapi.binance.com';
+let soundOn=false,lastSignal='',lastClosedCandle=0,refreshBusy=false;
+let cachedAnalysis=null;
 
-function ema(values, period) {
-  if (!values.length) return NaN;
-  const k = 2 / (period + 1);
-  let value = values[0];
-  for (let i = 1; i < values.length; i++) value = values[i] * k + value * (1 - k);
-  return value;
+function fmt(n,d=2){return Number.isFinite(n)?n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}):'—'}
+function ema(values,period){
+ if(values.length<period)return NaN;
+ const k=2/(period+1);let v=values[0];
+ for(let i=1;i<values.length;i++)v=values[i]*k+v*(1-k);
+ return v;
 }
-function calcRsi(values, period = 14) {
-  if (values.length <= period) return NaN;
-  let gains = 0, losses = 0;
-  for (let i = values.length - period; i < values.length; i++) {
-    const d = values[i] - values[i - 1];
-    if (d > 0) gains += d; else losses -= d;
+function rsi(values,period=14){
+ if(values.length<period+1)return NaN;
+ let gains=0,losses=0;
+ for(let i=values.length-period;i<values.length;i++){
+  const diff=values[i]-values[i-1];
+  if(diff>0)gains+=diff;else losses-=diff;
+ }
+ if(losses===0)return 100;
+ return 100-(100/(1+(gains/period)/(losses/period)));
+}
+function macd(values){
+ const fast=ema(values.slice(-40),12),slow=ema(values.slice(-40),26);
+ const hist=fast-slow;
+ return {line:hist,signal:hist>0};
+}
+function bollinger(values,period=20){
+ const a=values.slice(-period);
+ const mean=a.reduce((s,v)=>s+v,0)/a.length;
+ const variance=a.reduce((s,v)=>s+(v-mean)**2,0)/a.length;
+ const sd=Math.sqrt(variance);
+ return {mid:mean,upper:mean+2*sd,lower:mean-2*sd};
+}
+function atr(candles,period=14){
+ if(candles.length<period+1)return NaN;
+ const trs=[];
+ for(let i=candles.length-period;i<candles.length;i++){
+  const c=candles[i],prev=candles[i-1];
+  trs.push(Math.max(c.h-c.l,Math.abs(c.h-prev.c),Math.abs(c.l-prev.c)));
+ }
+ return trs.reduce((s,v)=>s+v,0)/trs.length;
+}
+function beep(){
+ try{
+  const ctx=new (window.AudioContext||window.webkitAudioContext)();
+  const osc=ctx.createOscillator(),gain=ctx.createGain();
+  osc.connect(gain);gain.connect(ctx.destination);
+  osc.frequency.value=880;gain.gain.value=.12;
+  osc.start();osc.stop(ctx.currentTime+.2);
+ }catch(e){}
+}
+async function getJSON(url){
+ const r=await fetch(url,{cache:'no-store'});
+ if(!r.ok)throw new Error('Binance API جواب نہیں دے رہی ('+r.status+')');
+ return r.json();
+}
+function setText(id,value){$(id).textContent=value}
+function analyze(candles,book){
+ const closes=candles.map(c=>c.c),volumes=candles.map(c=>c.v);
+ const last=candles[candles.length-1],price=last.c;
+ const e9=ema(closes.slice(-60),9),e21=ema(closes.slice(-80),21);
+ const rv=rsi(closes,14),bb=bollinger(closes,20),a=atr(candles,14),m=macd(closes);
+ const avgVol=volumes.slice(-20).reduce((s,v)=>s+v,0)/Math.min(20,volumes.length);
+ const volumeOK=last.v>avgVol;
+ const bids=book.bids.slice(0,20).reduce((s,x)=>s+Number(x[1]),0);
+ const asks=book.asks.slice(0,20).reduce((s,x)=>s+Number(x[1]),0);
+ const imbalance=(bids-asks)/(bids+asks||1);
+ const up=[
+  e9>e21,
+  price>e9,
+  rv>52&&rv<72,
+  price>bb.mid,
+  m.line>0,
+  imbalance>.08,
+  volumeOK
+ ];
+ const down=[
+  e9<e21,
+  price<e9,
+  rv<48&&rv>28,
+  price<bb.mid,
+  m.line<0,
+  imbalance<-.08,
+  volumeOK
+ ];
+ const upScore=up.filter(Boolean).length,downScore=down.filter(Boolean).length;
+ // 5/7 confirmations plus trend and momentum confirmation: conservative signal.
+ let signal='NO TRADE';
+ if(upScore>=5&&e9>e21&&m.line>0&&rv>50)signal='LONG';
+ else if(downScore>=5&&e9<e21&&m.line<0&&rv<50)signal='SHORT';
+ const entry=price;
+ let sl=null,tp1=null,tp2=null,tp3=null;
+ if(signal==='LONG'&&Number.isFinite(a)&&a>0){
+  sl=entry-1.5*a;const risk=entry-sl;tp1=entry+risk;tp2=entry+2*risk;tp3=entry+3*risk;
+ }else if(signal==='SHORT'&&Number.isFinite(a)&&a>0){
+  sl=entry+1.5*a;const risk=sl-entry;tp1=entry-risk;tp2=entry-2*risk;tp3=entry-3*risk;
+ }
+ return {signal,entry,sl,tp1,tp2,tp3,upScore,downScore,e9,e21,rv,bb,a,m,volumeOK,imbalance,bids,asks,last};
+}
+function showAnalysis(x){
+ const s=x.signal;
+ setText('signal',s);
+ $('signal').className='signal '+(s==='LONG'?'green':s==='SHORT'?'red':'yellow');
+ setText('reason',s==='NO TRADE'?'واضح اور مکمل تصدیق موجود نہیں؛ ٹریڈ سے گریز کریں':s+' · اگلی مکمل 15M کینڈل تک سگنل برقرار رہے گا');
+ setText('entry',fmt(x.entry));setText('sl',x.sl?fmt(x.sl):'—');
+ setText('tp1',x.tp1?fmt(x.tp1):'—');setText('tp2',x.tp2?fmt(x.tp2):'—');setText('tp3',x.tp3?fmt(x.tp3):'—');
+ setText('strength',Math.max(x.upScore,x.downScore)+'/7');
+ setText('rsi',fmt(x.rv,1));setText('macd',fmt(x.m.line,2));
+ setText('ema',fmt(x.e9,1)+' / '+fmt(x.e21,1));
+ setText('bb',fmt(x.bb.lower,0)+' – '+fmt(x.bb.upper,0));
+ setText('atr',fmt(x.a,2));setText('volume',x.volumeOK?'اوسط سے زیادہ':'اوسط سے کم');
+ const pct=x.imbalance*100;
+ setText('buy',fmt(x.bids,3)+' BTC');setText('sell',fmt(x.asks,3)+' BTC');
+ setText('imbalance',(pct>0?'+':'')+fmt(pct,1)+'%');
+ const upText=x.upScore+'/7',downText=x.downScore+'/7';
+ $('checks').innerHTML=
+  'EMA 9 / 21 <span>'+ (x.e9>x.e21?'Bullish':'Bearish')+'</span><br>'+
+  'RSI 14 <span>'+fmt(x.rv,1)+'</span><br>'+
+  'MACD <span>'+ (x.m.line>0?'Bullish':'Bearish')+'</span><br>'+
+  'Bollinger Mid <span>'+ (x.entry>x.bb.mid?'قیمت اوپر':'قیمت نیچے')+'</span><br>'+
+  'Volume <span>'+ (x.volumeOK?'زیادہ':'کم')+'</span><br>'+
+  'Order Book <span>'+ (pct>=0?'Buyers':'Sellers')+' '+fmt(Math.abs(pct),1)+'%</span><br>'+
+  'LONG confirmations <span>'+upText+'</span><br>'+
+  'SHORT confirmations <span>'+downText+'</span>';
+ if(soundOn&&s!=='NO TRADE'&&s!==lastSignal)beep();
+ lastSignal=s;
+}
+async function load(){
+ if(refreshBusy)return;refreshBusy=true;
+ $('error').textContent='';setText('connection','UPDATING');
+ try{
+  const [raw,book,ticker]=await Promise.all([
+   getJSON(API+'/fapi/v1/klines?symbol=BTCUSDT&interval=15m&limit=150'),
+   getJSON(API+'/fapi/v1/depth?symbol=BTCUSDT&limit=100'),
+   getJSON(API+'/fapi/v1/ticker/24hr?symbol=BTCUSDT')
+  ]);
+  if(!Array.isArray(raw)||raw.length<50)throw new Error('کافی 15 منٹ ڈیٹا دستیاب نہیں');
+  // Binance returns the current unfinished candle last; exclude it from signal calculations.
+  const closed=raw.slice(0,-1).map(k=>({t:+k[0],o:+k[1],h:+k[2],l:+k[3],c:+k[4],v:+k[5]}));
+  const livePrice=Number(ticker.lastPrice);
+  const candle=closed[closed.length-1];
+  // Recalculate the signal only when a NEW 15m candle has fully closed.
+  if(candle.t!==lastClosedCandle){
+   cachedAnalysis=analyze(closed,book);
+   lastClosedCandle=candle.t;
+   showAnalysis(cachedAnalysis);
   }
-  if (losses === 0) return 100;
-  const avgGain = gains / period, avgLoss = losses / period;
-  return 100 - (100 / (1 + avgGain / avgLoss));
-}
-async function getJson(path) {
-  const response = await fetch(BASE + path, {cache:'no-store'});
-  if (!response.ok) throw new Error('Binance API جواب: HTTP ' + response.status);
-  return response.json();
-}
-function beep() {
-  try {
-    const Ctx = window.AudioContext || window.webkitAudioContext;
-    const ctx = new Ctx();
-    const osc = ctx.createOscillator(), gain = ctx.createGain();
-    osc.connect(gain); gain.connect(ctx.destination);
-    osc.frequency.value = 880; gain.gain.value = 0.10;
-    osc.start(); osc.stop(ctx.currentTime + 0.2);
-    osc.onended = () => ctx.close();
-  } catch (e) {}
-}
-function fmt(n, digits=2) {
-  return Number(n).toLocaleString('en-US',{minimumFractionDigits:digits,maximumFractionDigits:digits});
-}
-function setText(id, value) { $(id).textContent = value; }
-
-function parseCsvRow(line) {
-  const out = [];
-  let value = '', quoted = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    if (ch === '"') {
-      if (quoted && line[i+1] === '"') { value += '"'; i++; }
-      else quoted = !quoted;
-    } else if (ch === ',' && !quoted) {
-      out.push(value); value = '';
-    } else value += ch;
+  setText('price',fmt(livePrice)+' USDT');
+  setText('change',fmt(Number(ticker.priceChangePercent),2)+'%');
+  $('change').className=Number(ticker.priceChangePercent)>=0?'good':'bad';
+  setText('updated','آخری ڈیٹا: '+new Date().toLocaleTimeString());
+  setText('candleInfo','آخری مکمل 15M کینڈل: '+new Date(candle.t+900000).toLocaleTimeString());
+  if(cachedAnalysis){
+   // Entry follows the current market price for display; SL/TP remain based on closed-candle ATR.
+   setText('entry',fmt(livePrice));
   }
-  out.push(value);
-  return out;
+  setText('connection','CONNECTED');
+ }catch(e){
+  setText('connection','OFFLINE');
+  $('error').textContent='کنکشن مسئلہ: '+e.message+'۔ انٹرنیٹ چیک کریں اور دوبارہ کوشش کریں۔';
+ }
+ finally{refreshBusy=false;}
 }
-function numberFromCsv(value) {
-  return Number(String(value || '').replace(/,/g,'').replace(/[$%]/g,''));
-}
-async function loadBlackRockHoldings(btcPrice) {
-  if (Date.now() - lastIbitFetch < 1800000) return;
-  lastIbitFetch = Date.now();
-  const csvUrl = 'https://www.blackrock.com/us/individual/products/333011/ishares-bitcoin-trust-etf/latest-holdings.csv';
-  try {
-    const response = await fetch(csvUrl, {cache:'no-store'});
-    if (!response.ok) throw new Error('HTTP ' + response.status);
-    const csv = await response.text();
-    const lines = csv.split(/\r?\n/).filter(Boolean);
-    const asOfLine = lines.find(line => line.startsWith('Fund Holdings as of'));
-    const sharesLine = lines.find(line => line.startsWith('Shares Outstanding'));
-    const btcLine = lines.find(line => line.startsWith('"BTC","BITCOIN"'));
-    if (!asOfLine || !sharesLine || !btcLine) throw new Error('CSV format پہچانا نہیں جا سکا');
-    const asOf = parseCsvRow(asOfLine)[1];
-    const shares = numberFromCsv(parseCsvRow(sharesLine)[1]);
-    const btcRow = parseCsvRow(btcLine);
-    const btcUnits = numberFromCsv(btcRow[7]);
-    if (!asOf || !shares || !btcUnits) throw new Error('Holdings data نامکمل ہے');
-
-    setText('ibitDate', asOf);
-    setText('ibitBtc', fmt(btcUnits,3) + ' BTC');
-    setText('ibitShares', Math.round(shares).toLocaleString('en-US'));
-    setText('ibitValue', '$' + fmt(btcUnits * btcPrice,0));
-    $('ibitBadge').textContent = 'OFFICIAL CSV LOADED';
-    $('etfStatus').textContent = 'BlackRock کے سرکاری IBIT holdings CSV سے ڈیٹا موصول ہوا۔';
-
-    const key = 'amjad_ibit_daily_snapshot_v1';
-    const current = {asOf, shares, btcUnits};
-    let previous = null;
-    try { previous = JSON.parse(localStorage.getItem(key) || 'null'); } catch(e) {}
-    if (!previous) {
-      setText('ibitFlow', 'ابتدائی baseline محفوظ کر دی گئی');
-      setText('ibitFlowNote', 'اگلے نئے daily holdings snapshot پر تبدیلی کا تخمینہ دستیاب ہوگا۔');
-      try { localStorage.setItem(key, JSON.stringify(current)); } catch(e) {}
-    } else if (previous.asOf === asOf) {
-      setText('ibitFlow', 'آج کا نیا daily snapshot ابھی نہیں آیا');
-      setText('ibitFlowNote', 'محفوظ آخری snapshot: ' + previous.asOf + '۔ اسی تاریخ کے بار بار refresh کو نیا flow نہیں سمجھا جاتا۔');
-    } else {
-      const deltaBtc = btcUnits - Number(previous.btcUnits);
-      const approxUsd = deltaBtc * btcPrice;
-      const direction = approxUsd > 0 ? 'ممکنہ INFLOW' : approxUsd < 0 ? 'ممکنہ OUTFLOW' : 'کوئی تبدیلی نہیں';
-      setText('ibitFlow', direction + ' · ' + (deltaBtc >= 0 ? '+' : '') + fmt(deltaBtc,3) + ' BTC');
-      setText('ibitFlowNote', 'تقریبی مالیت: ' + (approxUsd >= 0 ? '+' : '-') + '$' + fmt(Math.abs(approxUsd),0) +
-        ' · موازنہ ' + previous.asOf + ' سے ' + asOf + ' تک۔ BTC holdings کی تبدیلی کا تخمینہ ہے، تصدیق شدہ net cash flow نہیں۔');
-      try { localStorage.setItem(key, JSON.stringify(current)); } catch(e) {}
-    }
-  } catch (err) {
-    $('ibitBadge').textContent = 'CSV UNAVAILABLE';
-    $('etfStatus').textContent = 'ایپ BlackRock CSV خودکار طور پر نہیں پڑھ سکی (' + err.message +
-      ')۔ نیچے سرکاری CSV لنک کھول کر تازہ holdings دیکھی جا سکتی ہیں۔';
-    setText('ibitFlow', 'خودکار ڈیٹا دستیاب نہیں');
-    setText('ibitFlowNote', 'ممکن ہے Android WebView یا BlackRock کی طرف سے cross-origin پابندی ہو۔');
-  }
-}
-
-async function load() {
-  if (busy) return;
-  busy = true;
-  $('error').textContent = '';
-  try {
-    const [k15, k1, depth, oiData, premium, ticker] = await Promise.all([
-      getJson('/fapi/v1/klines?symbol=BTCUSDT&interval=15m&limit=100'),
-      getJson('/fapi/v1/klines?symbol=BTCUSDT&interval=1m&limit=3'),
-      getJson('/fapi/v1/depth?symbol=BTCUSDT&limit=20'),
-      getJson('/fapi/v1/openInterest?symbol=BTCUSDT'),
-      getJson('/fapi/v1/premiumIndex?symbol=BTCUSDT'),
-      getJson('/fapi/v1/ticker/price?symbol=BTCUSDT')
-    ]);
-
-    // آخری 15m کینڈل ابھی بن رہی ہوتی ہے، اسے سگنل کے حساب سے خارج کریں۔
-    const closed15 = k15.slice(0, -1);
-    if (closed15.length < 30) throw new Error('15 منٹ کا کافی تاریخی ڈیٹا نہیں ملا۔');
-    const closes = closed15.map(c => Number(c[4]));
-    const volumes = closed15.map(c => Number(c[5]));
-    const lastCandle = closed15[closed15.length - 1];
-    const signalPrice = closes[closes.length - 1];
-    const livePrice = Number(ticker.price);
-
-    const e9 = ema(closes.slice(-40), 9);
-    const e21 = ema(closes.slice(-60), 21);
-    const rsi = calcRsi(closes, 14);
-    const recent = closes.slice(-20);
-    const mean = recent.reduce((a,b)=>a+b,0) / recent.length;
-    const variance = recent.reduce((a,b)=>a + (b-mean)*(b-mean),0) / recent.length;
-    const sd = Math.sqrt(variance);
-    const upper = mean + 2 * sd, lower = mean - 2 * sd;
-
-    const recentVol = volumes.slice(-20);
-    const avgVol = recentVol.slice(0,-1).reduce((a,b)=>a+b,0) / Math.max(1,recentVol.length-1);
-    const lastVol = recentVol[recentVol.length-1];
-    const volumeOk = lastVol > avgVol;
-
-    const bids = depth.bids.slice(0,10).reduce((s,x)=>s + Number(x[0])*Number(x[1]),0);
-    const asks = depth.asks.slice(0,10).reduce((s,x)=>s + Number(x[0])*Number(x[1]),0);
-    const imbalance = (bids - asks) / (bids + asks || 1);
-
-    const oi = Number(oiData.openInterest);
-    const funding = Number(premium.lastFundingRate);
-    const markPrice = Number(premium.markPrice);
-
-    // ایک منٹ کی موجودہ قیمت کی نگرانی؛ آخری بند 1m کینڈل سے موازنہ۔
-    const oneMinuteClosed = k1[k1.length-2];
-    const oneMinutePrevious = k1[k1.length-3];
-    const oneMinChange = oneMinuteClosed && oneMinutePrevious
-      ? ((Number(oneMinuteClosed[4])-Number(oneMinutePrevious[4]))/Number(oneMinutePrevious[4]))*100
-      : 0;
-
-    // 15m سگنل کے لیے سخت مگر سادہ confirmation score۔
-    const longChecks = [
-      e9 > e21,
-      signalPrice > e9,
-      rsi >= 52 && rsi <= 70,
-      signalPrice > mean && signalPrice < upper,
-      imbalance > 0.08,
-      volumeOk
-    ];
-    const shortChecks = [
-      e9 < e21,
-      signalPrice < e9,
-      rsi <= 48 && rsi >= 30,
-      signalPrice < mean && signalPrice > lower,
-      imbalance < -0.08,
-      volumeOk
-    ];
-    const longScore = longChecks.filter(Boolean).length;
-    const shortScore = shortChecks.filter(Boolean).length;
-    let signal = 'NO TRADE';
-    // 6 میں سے کم از کم 5 شرائط، اور مخالف اسکور سے واضح فرق۔
-    if (longScore >= 5 && longScore - shortScore >= 2) signal = 'LONG';
-    if (shortScore >= 5 && shortScore - longScore >= 2) signal = 'SHORT';
-
-    const entry = livePrice;
-    let stop = null, target = null;
-    if (signal === 'LONG') { stop = entry * 0.995; target = entry * 1.01; }
-    if (signal === 'SHORT') { stop = entry * 1.005; target = entry * 0.99; }
-
-    $('signal').textContent = signal;
-    $('signal').className = 'signal ' + (signal==='LONG'?'green':signal==='SHORT'?'red':'yellow');
-    setText('reason', signal==='NO TRADE'
-      ? 'شرائط پوری نہیں ہوئیں؛ فی الحال ٹریڈ نہ لیں۔'
-      : signal + ' کے حق میں ' + Math.max(longScore,shortScore) + '/6 شرائط مکمل ہیں۔');
-    setText('price', fmt(livePrice,2) + ' USDT');
-    setText('entry', fmt(entry,2));
-    setText('sl', stop===null?'—':fmt(stop,2));
-    setText('tp', target===null?'—':fmt(target,2));
-    setText('strength', Math.max(longScore,shortScore) + '/6');
-    setText('oneMin', (oneMinChange>=0?'+':'') + fmt(oneMinChange,3) + '%');
-    setText('trend', e9>e21?'UPTREND':'DOWNTREND');
-    setText('rsi', fmt(rsi,1));
-    setText('ema', fmt(e9,1) + ' / ' + fmt(e21,1));
-    setText('imbalance', (imbalance*100>=0?'+':'') + fmt(imbalance*100,1) + '%');
-    setText('volume', volumeOk?'اوسط سے زیادہ':'اوسط سے کم');
-    setText('oi', fmt(oi,3) + ' BTC');
-    setText('funding', (funding*100>=0?'+':'') + fmt(funding*100,4) + '%');
-    setText('updated', 'Live قیمت اپ ڈیٹ: ' + new Date().toLocaleTimeString());
-    setText('candleInfo', 'آخری مکمل 15m کینڈل: ' + new Date(Number(lastCandle[6])).toLocaleTimeString());
-    $('checks').innerHTML =
-      'EMA 9 بمقابلہ EMA 21 <span>' + (e9>e21?'Bullish':'Bearish') + '</span><br>' +
-      'RSI فلٹر <span>' + (rsi>=52&&rsi<=70?'Long موافق':rsi<=48&&rsi>=30?'Short موافق':'Neutral') + '</span><br>' +
-      'Bollinger Bands <span>' + (signalPrice>mean?'وسط سے اوپر':signalPrice<mean?'وسط سے نیچے':'وسط کے قریب') + '</span><br>' +
-      'Volume <span>' + (volumeOk?'تصدیق':'تصدیق نہیں') + '</span><br>' +
-      'Order Book <span>' + (imbalance>0.08?'خریدار غالب':imbalance< -0.08?'فروخت کنندہ غالب':'متوازن') + '</span><br>' +
-      'Open Interest <span>' + fmt(oi,3) + ' BTC</span><br>' +
-      'Mark Price <span>' + fmt(markPrice,2) + '</span><br>' +
-      'LONG شرائط <span>' + longScore + '/6</span><br>' +
-      'SHORT شرائط <span>' + shortScore + '/6</span>';
-
-    loadBlackRockHoldings(livePrice);
-    if (soundOn && signal !== 'NO TRADE' && signal !== lastSignal) beep();
-    lastSignal = signal;
-    $('live').textContent = 'CONNECTED';
-  } catch (err) {
-    $('live').textContent = 'OFFLINE';
-    $('error').textContent = 'ڈیٹا کنکشن مسئلہ: ' + err.message + '۔ انٹرنیٹ چیک کریں یا کچھ دیر بعد دوبارہ کوشش کریں۔';
-  } finally {
-    busy = false;
-  }
-}
-
-$('sound').addEventListener('click', () => {
-  soundOn = true; beep(); $('sound').textContent = '🔔 آواز آن ہے';
-});
-$('refresh').addEventListener('click', load);
+$('sound').addEventListener('click',()=>{soundOn=true;beep();setText('sound','🔔 آواز آن ہے')});
+$('refresh').addEventListener('click',load);
 load();
-// قیمت/مارکیٹ ڈیٹا ہر 15 سیکنڈ بعد ریفریش؛ سگنل صرف مکمل 15m candles سے بنتا ہے۔
-setInterval(load, 15000);
+setInterval(load,60000);
 </script>
 </body>
 </html>
